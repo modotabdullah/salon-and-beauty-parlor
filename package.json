@@ -1,0 +1,24 @@
+{
+  "name": "salon-and-beauty-parlor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modotabdullah/salon-and-beauty-parlor.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/modotabdullah/salon-and-beauty-parlor/issues"
+  },
+  "homepage": "https://github.com/modotabdullah/salon-and-beauty-parlor#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}

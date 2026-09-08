@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Salon | Book Appointment</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Aura Salon</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/stylists.html">Stylists</a></li>
+        <li><a href="/book.html" class="active">Book Now</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Book Your Visit</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label for="service">Select Service</label>
+        <select id="service" required>
+          <option value="">-- Choose a Service --</option>
+          <option value="1">Signature Haircut - $65</option>
+          <option value="2">Full Balayage - $180</option>
+          <option value="3">Beard Trim - $35</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="stylist">Select Stylist</label>
+        <select id="stylist" required>
+          <option value="">-- Choose a Stylist --</option>
+          <option value="1">Alex Rivera</option>
+          <option value="2">Jordan Chen</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="appointmentTime">Date and Time</label>
+        <input type="datetime-local" id="appointmentTime" required>
+      </div>
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aura Salon. All rights reserved.</p>
+  </footer>
+</body>
+</html>
