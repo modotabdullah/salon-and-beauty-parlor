@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Salon | Services</title>
-  <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Maison Rousseau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Aura Salon</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Maison Rousseau</a>
+    <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services.html" class="active">Services</a></li>
-        <li><a href="/stylists.html">Stylists</a></li>
-        <li><a href="/book.html">Book Now</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="stylists.html">Stylists</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
 
-  <main>
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Signature Haircut</h3>
-        <p>Precision cut including shampoo, scalp massage, and blow-dry styling.</p>
-        <p class="price">$65 (45 mins)</p>
-      </div>
-      <div class="card">
-        <h3>Full Balayage</h3>
-        <p>Hand-painted highlights for a natural, sun-kissed gradient look.</p>
-        <p class="price">$180 (120 mins)</p>
-      </div>
-      <div class="card">
-        <h3>Beard Trim & Lineup</h3>
-        <p>Detailed shaping with hot towel treatment and straight-razor finish.</p>
-        <p class="price">$35 (30 mins)</p>
-      </div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h1>Services</h1>
+      <p>Prices and timings for every treatment we offer, grouped by category.</p>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Aura Salon. All rights reserved.</p>
-  </footer>
+    <div id="services-container">
+      <p>Loading services…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Maison Rousseau</span>
+    <span>University Project — Full-Stack Salon Booking System</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/services.js"></script>
 </body>
 </html>

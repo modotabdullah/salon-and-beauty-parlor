@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Salon | Book Appointment</title>
-  <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment — Maison Rousseau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Aura Salon</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Maison Rousseau</a>
+    <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/stylists.html">Stylists</a></li>
-        <li><a href="/book.html" class="active">Book Now</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="stylists.html">Stylists</a></li>
+        <li><a href="book.html" aria-current="page">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
 
-  <main>
-    <h2>Book Your Visit</h2>
-    <form id="booking-form">
-      <div class="form-group">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" required placeholder="Jane Doe">
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h1>Book an Appointment</h1>
+      <p>One service per booking. Pick what you'd like, who you'd like it from, and a time that works.</p>
+    </div>
+
+    <form id="booking-form" novalidate>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="first_name">First name</label>
+          <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-field">
+          <label for="last_name">Last name</label>
+          <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-field full">
+          <label for="service_id">Service</label>
+          <select id="service_id" name="service_id" required>
+            <option value="">Loading services…</option>
+          </select>
+        </div>
+
+        <div class="form-field full">
+          <label for="staff_id">Stylist</label>
+          <select id="staff_id" name="staff_id" required>
+            <option value="">Loading stylists…</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="appointment_date">Date</label>
+          <input type="date" id="appointment_date" name="appointment_date" required>
+        </div>
+        <div class="form-field">
+          <label for="start_time">Time</label>
+          <input type="time" id="start_time" name="start_time" required>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required placeholder="jane@example.com">
-      </div>
-      <div class="form-group">
-        <label for="service">Select Service</label>
-        <select id="service" required>
-          <option value="">-- Choose a Service --</option>
-          <option value="1">Signature Haircut - $65</option>
-          <option value="2">Full Balayage - $180</option>
-          <option value="3">Beard Trim - $35</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="stylist">Select Stylist</label>
-        <select id="stylist" required>
-          <option value="">-- Choose a Stylist --</option>
-          <option value="1">Alex Rivera</option>
-          <option value="2">Jordan Chen</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="appointmentTime">Date and Time</label>
-        <input type="datetime-local" id="appointmentTime" required>
-      </div>
-      <button type="submit" class="btn">Confirm Booking</button>
+
+      <p class="form-status" id="form-status"></p>
+
+      <button type="submit" class="btn">Confirm booking</button>
     </form>
-  </main>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 Aura Salon. All rights reserved.</p>
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Maison Rousseau</span>
+    <span>University Project — Full-Stack Salon Booking System</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/book.js"></script>
 </body>
 </html>

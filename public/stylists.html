@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Salon | Stylists</title>
-  <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stylists — Maison Rousseau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Aura Salon</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Maison Rousseau</a>
+    <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/stylists.html" class="active">Stylists</a></li>
-        <li><a href="/book.html">Book Now</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="stylists.html" aria-current="page">Stylists</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
 
-  <main>
-    <h2>Meet Our Team</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Alex Rivera</h3>
-        <p><strong>Master Colorist</strong></p>
-        <p>Specializes in vivid tones, balayage, and corrective color with 8+ years of experience.</p>
-      </div>
-      <div class="card">
-        <h3>Jordan Chen</h3>
-        <p><strong>Lead Hair Stylist</strong></p>
-        <p>Expert in modern precision haircuts, layered styles, and event styling.</p>
-      </div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h1>Our Stylists</h1>
+      <p>Every treatment is booked with a specific specialist — here's who's on our team.</p>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Aura Salon. All rights reserved.</p>
-  </footer>
+    <div class="stylist-grid" id="stylists-container">
+      <p>Loading stylists…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Maison Rousseau</span>
+    <span>University Project — Full-Stack Salon Booking System</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/stylists.js"></script>
 </body>
 </html>

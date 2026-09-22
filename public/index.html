@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Salon | Home</title>
-  <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Rousseau — Salon &amp; Beauty Parlor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Aura Salon</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Maison Rousseau</a>
+    <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/stylists.html">Stylists</a></li>
-        <li><a href="/book.html">Book Now</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="stylists.html">Stylists</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <h1>Premium Styling & Beauty Services</h1>
-      <p>Experience world-class haircuts, coloring, and styling tailored just for you.</p>
-      <a href="/book.html" class="btn">Book an Appointment</a>
-    </section>
-  </main>
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Est. in the heart of the city</p>
+      <h1>Considered care, for hair and skin that shows it.</h1>
+      <p>Maison Rousseau is a small studio built around one idea: fewer treatments, done properly, by people who've spent years learning their craft.</p>
+      <a href="book.html" class="btn">Book an appointment</a>
+    </div>
+    <div class="hero-image">Studio interior photo</div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 Aura Salon. All rights reserved.</p>
-  </footer>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>What we do</h2>
+      <p>A short, focused menu — cut, color, and skin treatments, each handled by a specialist rather than a generalist.</p>
+    </div>
+    <div class="stylist-grid">
+      <div class="stylist-card">
+        <div class="stylist-photo">Cut &amp; styling</div>
+        <h3>Cut &amp; Styling</h3>
+        <p>Precision cuts shaped around how your hair actually grows.</p>
+      </div>
+      <div class="stylist-card">
+        <div class="stylist-photo">Color</div>
+        <h3>Color</h3>
+        <p>From subtle root work to a full change of direction.</p>
+      </div>
+      <div class="stylist-card">
+        <div class="stylist-photo">Skin treatments</div>
+        <h3>Skin</h3>
+        <p>Facials and treatments suited to your skin, not a set menu.</p>
+      </div>
+    </div>
+    <p style="margin-top: 40px;"><a href="services.html" class="btn btn-outline">See full service list</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Maison Rousseau</span>
+    <span>University Project — Full-Stack Salon Booking System</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
 </body>
 </html>
