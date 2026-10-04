@@ -7,7 +7,7 @@ const serviceSelect = document.getElementById('service_id');
 const staffSelect = document.getElementById('staff_id');
 const statusEl = document.getElementById('form-status');
 
-async function loadServiceOptions() {
+async function loadServiceOptions() { // Live GET request hitting the database on every page load
   try {
     const response = await fetch('/api/services');
     const services = await response.json();
@@ -25,7 +25,7 @@ async function loadServiceOptions() {
   }
 }
 
-async function loadStaffOptions() {
+async function loadStaffOptions() { // Live GET request hitting the database on every page load
   try {
     const response = await fetch('/api/staff');
     const staff = await response.json();
