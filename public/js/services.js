@@ -4,7 +4,7 @@
 const container = document.getElementById('services-container');
 
 function formatPrice(price) {
-  return `$${Number(price).toFixed(2)}`;
+  return `৳${Number(price).toFixed(2)}`;
 }
 
 function groupByCategory(services) {

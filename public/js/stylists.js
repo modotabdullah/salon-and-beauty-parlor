@@ -3,6 +3,12 @@
 
 const container = document.getElementById('stylists-container');
 
+const femaleNames = ['Rina','Shahana','Nasrin','Taslima','Rokeya','Ferdousi','Shirin','Monira'];
+
+function avatarFor(firstName) {
+  return femaleNames.includes(firstName) ? 'images/stylists/avatar-female.jpg' : 'images/stylists/avatar-male.jpg';
+}
+
 async function loadStylists() {
   try {
     const response = await fetch('/api/staff');
@@ -20,7 +26,7 @@ async function loadStylists() {
       const card = document.createElement('div');
       card.className = 'stylist-card';
       card.innerHTML = `
-        <div class="stylist-photo">Photo</div>
+        <div class="stylist-photo"><img src="${avatarFor(stylist.first_name)}" alt="${stylist.first_name} ${stylist.last_name}"></div>
         <h3>${stylist.first_name} ${stylist.last_name}</h3>
         <p class="stylist-title">${stylist.job_title || ''}</p>
       `;

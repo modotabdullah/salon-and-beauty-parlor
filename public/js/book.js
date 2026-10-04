@@ -16,7 +16,7 @@ async function loadServiceOptions() {
     services.forEach((service) => {
       const option = document.createElement('option');
       option.value = service.service_id;
-      option.textContent = `${service.service_name} — $${Number(service.base_price).toFixed(2)} (${service.duration_minutes} min)`;
+      option.textContent = `${service.service_name} — ৳${Number(service.base_price).toFixed(2)} (${service.duration_minutes} min)`;
       serviceSelect.appendChild(option);
     });
   } catch (err) {
