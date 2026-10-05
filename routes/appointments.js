@@ -46,6 +46,25 @@ router.post('/', async (req, res) => {
     const durationMinutes = serviceResult.rows[0].duration_minutes;
     const endTime = addMinutes(start_time, durationMinutes);
 
+    // Error if staff is already occupied
+    const conflictResult = await client.query(
+      `SELECT 1
+       FROM appointment_items ai
+       JOIN appointments a ON a.appointment_id = ai.appointment_id
+       WHERE ai.staff_id = $1
+        AND a.appointment_date = $2
+        AND a.status != 'Cancelled'
+        AND ai.start_time < $3
+        AND ai.end_time > $4
+       LIMIT 1`,
+       [staff_id, appointment_date, endTime, start_time]
+    );
+
+    if (conflictResult.rows.length > 0) {
+      await client.query('ROLLBACK');
+      return res.status(409).json({error: 'This stylist already has a booking that overlaps this time slot'});
+    }
+
     // Insert the parent appointment.
     const appointmentResult = await client.query(
       `INSERT INTO appointments (client_id, appointment_date, status, total_duration_minutes)
